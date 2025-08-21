@@ -34,6 +34,25 @@ go:
   - changed-files:
       - any-glob-to-any-file: ["**/**.go"]
 
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          [
+            "**/package.json",
+            "**/package-lock.json",
+            "**/yarn.lock",
+            "**/pnpm-lock.yaml",
+            "**/bun.lockb",
+            "**/bun.lock",
+            "**/go.mod",
+            "**/go.sum",
+            "**/requirements.txt",
+            "**/pyproject.toml",
+            "**/poetry.lock",
+            "**/Pipfile",
+            "**/Pipfile.lock",
+          ]
+
 php:
   - changed-files:
       - any-glob-to-any-file: ["**/**.php"]

@@ -1,0 +1,28 @@
+checks:
+
+  - check: message
+    regex: '^(?:(feat|fix|perf|refactor|docs|style|test|build|ci|chore|revert|security): )?[A-Z][A-Z0-9]+-\d+: .+(?:\n\n.*(?:\n.*)*)?$'
+    error: |
+      The commit message should be structured as follows:
+
+      [optional <type>: ]<JIRA_ISSUE_KEY>: <description>
+      [optional body]
+      [optional footer(s)]
+
+      More details please refer to https://www.conventionalcommits.org
+    suggest: please check your commit message whether matches above regex
+
+  - check: branch
+    regex: ^(bugfix|feature|release|hotfix|task|chore)\/[A-Z][A-Z0-9]+-\d+-.+|(master)|(main)|(HEAD)|(PR-.+)
+    error: "Branches must begin with these types: bugfix/ feature/ release/ hotfix/ task/ chore/ followed by the JIRA_ISSUE_KEY and a hyphenated description"
+    suggest: run command `git checkout -b type/<JIRA_ISSUE_KEY>-<hyphenated-description>`
+
+  - check: author_name
+    regex: ^[A-Za-zÀ-ÖØ-öø-ÿ\u0100-\u017F\u0180-\u024F ,.\'-]+$|.*(\[bot])
+    error: The committer name seems invalid
+    suggest: run command `git config user.name "Your Name"`
+
+  - check: author_email
+    regex: ^.+@saaslabs.co$
+    error: The committer email seems invalid
+    suggest: run command `git config user.email yourname@example.com`

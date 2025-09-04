@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [opened, synchronize]
     branches:
-      - ${{ github.event.repository.default_branch }}
+      - main
 
 jobs:
   git-hygiene:

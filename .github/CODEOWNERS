@@ -3,6 +3,10 @@
 # DevOps owns all the github actions by default and a review will be required for any changes
 .github/workflows/* @saaslabsco/devops
 
+
+# Labeler is a Global level change to be made via terraform and will require a review from Vibhor
+.github/labeler.yml @vibhor1997a
+
 # CODEOWNERS file is owned by Terraform and changed automatically via terraform and manual changes are not allowed in our workflow. Contact @vibhor1997a for any changes.
 .github/CODEOWNERS @vibhor1997a
 
@@ -12,11 +16,14 @@ bitbucket-pipelines.yml @saaslabsco/devops
 # Shell scripts are owned by DevOps and will require a review from devops team
 *.sh @saaslabsco/devops
 
-# All K8s values files are owned by DevOps and will require a review from devops team
-values*.yml @saaslabsco/devops
+# All K8s values files are owned by DevOps and will require a review from devops team or Admins
+values*.yml @saaslabsco/devops @saaslabsco/admins
 
 # Scripts are owned by DevOps and will require a review from devops team
 scripts/* @saaslabsco/devops
+
+# Commit check is a Global level change to be made via terraform and will require a review from Vibhor
+.commit-check.yml @vibhor1997a
 
 # Dockerfile is owned by DevOps and will require a review from devops team
 *Dockerfile* @saaslabsco/devops

@@ -18,6 +18,7 @@ bitbucket-pipelines.yml @saaslabsco/devops
 
 # All K8s values files are owned by DevOps and will require a review from devops team or Admins
 values*.yml @saaslabsco/devops @saaslabsco/admins
+values*.yaml @saaslabsco/devops @saaslabsco/admins
 
 # Scripts are owned by DevOps and will require a review from devops team
 scripts/* @saaslabsco/devops

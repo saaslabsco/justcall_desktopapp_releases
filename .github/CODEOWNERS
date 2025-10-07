@@ -1,4 +1,4 @@
-* @saaslabsco/admins @saaslabsco/voice @saaslabs-goelDivyanshu
+* @saaslabsco/admins @saaslabsco/voice
 
 # DevOps owns all the github actions by default and a review will be required for any changes
 .github/workflows/* @saaslabsco/devops
